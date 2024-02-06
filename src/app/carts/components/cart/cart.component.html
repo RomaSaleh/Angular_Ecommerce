@@ -1,0 +1,206 @@
+<!-- <section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-lg-12 col-md-12 col-12">
+                <h2 class="display-5 mb-2 text-center">Shopping Cart</h2>
+                <p class="mb-5 text-center">
+                    <i class="text-info font-weight-bold">{{CartProduct.length}}</i>item in your cart</p>
+                    <button type="button" class="btn btn-warning btn-lg" style="float:right" (click)=clearcart()>
+                <table id="shoppingCart" class="table table-condensed table-responsive">
+                    <thead>
+                        <tr>
+                            <th>product</th>
+                            <th>price</th>
+                            <th style="width:35%">Quantity</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+
+        </div>
+
+
+
+
+    </div>
+</section> -->
+
+///////////////////////////////////////////////////
+
+<!-- <div class="cartBox">
+    <h1 class="text-danger">Shopping Cart</h1>
+  <div class="headCart">
+    <p class="lead">You have <label class="text-danger ">{{CartProduct.length}}}</label> item in your cart</p>
+    <span class="text-danger card-header" (click)=clearcart()>Clear Shopping Cart</span>
+  </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>product</th>
+                <th>Price</th>
+                <th style="width: 25%;">Quantity</th>
+                <th>Totle</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of CartProduct; let index = index" >
+                <td><img src="{{item.item.image}}" alt=""></td>
+                <td>{{item.item.title}}</td>
+                <td>{{item.item.price}} L.E</td>
+                <td>
+                    <div class="quantity">
+                        <button class="btn btn-dark" (click)="addaccount(index)" >+</button>
+                        <input class="form-control"  type="number" (change)="detectshange()" [(ngModel)]="item.quantity" min="1">
+                        <button class="btn btn-dark" (click)="minusaccount(index)" >-</button>
+                    </div>
+                </td>
+                <td>{{item.item.price * item.quantity}} L.E</td>
+                <td>
+                    <button class="btn btn-danger" (click)="delete(index)" >Delete</button>
+                </td>
+            </tr>
+        </tbody> 
+        <tfoot>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Total : {{total}} LE</th>
+                 (click)="addCart()" -->
+                <!-- <th><button class="btn btn-success">Order Now</button></th>    
+            </tr>
+        </tfoot>
+    </table>
+    
+</div> --> 
+<!-- <div class="alert alert-success" role="alert" *ngIf="success"><strong>Well done!</strong> Your Order is Successfully Send</div> -->
+///////////////////////////////////////////////////////////
+<!-- <div class="container px-3 my-5 clearfix">
+    Shopping cart table 
+     <div class="card">
+     
+        <h1 class="text-danger">Shopping Cart</h1>
+        <div class="headCart">
+          <p class="lead">You have <label class="text-danger ">{{CartProduct.length}}</label> item in your cart</p>
+          <span class="text-danger card-header" (click)=clearcart()>Clear Shopping Cart</span>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered m-0">
+                <thead>
+                  <tr>
+                    
+                    <th class="text-center py-3 px-4" style="min-width: 400px;">Product Name &amp; Details</th>
+                    <th class="text-right py-3 px-4" style="width: 100px;">Price</th>
+                    <th class="text-center py-3 px-4" style="width: 120px;">Quantity</th>
+                    <th class="text-right py-3 px-4" style="width: 100px;">Total</th>
+                    <th class="text-center align-middle py-3 px-0" style="width: 40px;"><a href="#" class="shop-tooltip float-none text-light" title="" data-original-title="Clear cart"><i class="ino ion-md-trash"></i></a></th>
+                  </tr>
+                </thead>
+                <tbody>
+        
+                  <tr *ngFor="let item of CartProduct; let index = index">
+                    <td class="p-4">
+                      <div class="media align-items-center">
+                        <img src="{{item.item.image}}" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                        <div class="media-body">
+                          <a href="#" class="d-block text-dark">{{item.item.title}}</a>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price}} L.E</td>
+                    <td class="align-middle p-4"><input type="text" class="form-control text-center" [(ngModel)]="item.quantity"></td>
+                    <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price * item.quantity}} L.E</td>
+                    <td class="text-center align-middle px-0"><button class="btn btn-danger" (click)="delete(index)" >Delete</button></td>
+                  </tr>
+        
+                </tbody>
+              </table>
+            </div>
+            
+        
+            <div class="d-flex flex-wrap justify-content-between align-items-center pb-4">
+             
+              <div class="d-flex">
+               
+                <div class="text-right mt-4">
+                  <label class="text-muted font-weight-normal m-0">Total price</label>
+                  <div class="text-large"><strong>{{total}} LE</strong></div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="float-right">
+              <button type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3">Back to shopping</button>
+              <button type="button" class="btn btn-lg btn-success mt-2" (click)="addToCart()">Order Now</button>
+            </div>
+        
+          </div>
+          <div class="alert alert-success" role="alert" *ngIf="success"><strong>Well done!</strong> Your Order is Successfully Send</div> 
+      </div>
+  </div> -->
+  ///////////////////////////////////////////////////////////////////////////////////////////////
+  <div class="container mt-5">
+        <div class="box d-flex justify-content-center flex-wrap">
+            <div class="cart-head w-50 mb-5">
+                <h2 class="fw-bold">Shopping Cart</h2>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="fs-5">You have <span>{{CartProduct.length}}</span> Items in your cart</p>
+                    <button class="btn btn-outline-danger" (click)=clearcart()>
+                        Clear Shopping cart
+                    </button>
+                </div>
+            </div>
+    
+            <div class="cart-body w-100">
+                <div class="cart-table">
+                    <table class="text-center w-100  mb-3">
+                        <thead>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </thead>
+    
+                        <tbody>
+                            <tr *ngFor="let item of CartProduct; let index = index">
+                                <td>
+                                    <img src={{item.item.image}}/>
+                                </td>
+                                <td>
+                                        {{item.item.title}}
+                                </td>
+                                <td>
+                                        {{item.item.price}} L.E
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline-dark" (click)="addaccount(index)">+</button>
+                                    <input type="text" class="quantity mx-2 text-center w-25" min="1" (change)="detectshange()" [(ngModel)]="item.quantity">
+                                    <button class="btn btn-outline-dark" (click)="minusaccount(index)">-</button>
+                                </td>
+                                <td>
+                                        {{item.item.price * item.quantity}} L.E
+                                </td>
+                                <td>
+                                    <button class="btn btn-danger delete"  (click)="delete(index)">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+    
+                    <div class="table-footer d-flex align-items-center justify-content-around my-3">
+                        <div class="total fw-bold fs-4">
+                            <p>Total: {{total}} LE</p>
+                        </div>
+                        <button class="btn btn-success" (click)="addToCart()">Order Now</button>
+                    </div>
+                    
+                </div>
+    
+            </div>
+        </div>
+    </div>

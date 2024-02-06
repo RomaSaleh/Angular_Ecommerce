@@ -1,0 +1,29 @@
+<!-- <div class="cont"> -->
+  <!-- this is parent -->
+  <app-carousel></app-carousel>
+  <div class="container">
+  <app-select-category [data]="catarr" [title]="'Categories'" (SelectedValue)=GetProductByCategory($event)> </app-select-category>
+  
+  <!-- <div class="row" *ngIf="!SpinnerState"> 
+      <div class="col-md-3 col-sm-12" *ngFor="let prd of prdarr" >
+        <app-product [data]=prd (item)=AddToCart($event) ></app-product>
+       </div>
+  </div>     -->
+
+  <div class="all-products w-75 ms-5">
+      <div class="row" *ngIf="!SpinnerState">
+          <div class="product col-sm-6 col-md-4 col-xl-4 d-flex g-5" *ngFor="let prd of prdarr">
+                  <app-product class="w-100" data-aos="zoom-in"  [data]=prd (item)=AddToCart($event)></app-product>
+          </div>
+      </div>
+
+
+
+
+  <div class="d-flex justify-content-center" *ngIf="SpinnerState">
+      <app-spinner></app-spinner>
+  </div>
+</div>
+
+
+

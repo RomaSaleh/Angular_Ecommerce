@@ -1,0 +1,11 @@
+
+                             <!-- Child Component -->
+
+<div style="padding-top: 80px; width: 420px" >
+   
+    <h4><label>{{title}}:</label></h4>
+      <select class="form-select" (change)=FilterCategory($event)>
+          <option selected>All Categories</option>
+ <!-- or[ngvalue]--> <option [value]='item' *ngFor="let item of data">{{item}}</option> 
+            </select>
+   </div>  
